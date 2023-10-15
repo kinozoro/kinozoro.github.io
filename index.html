@@ -1,3 +1,45 @@
 <div>
   Hello there
 </div>
+<div class="filmcdn_iframe">
+</div>
+<script type="text/javascript">
+window.onload = function ( )
+{
+urlParams = new URLSearchParams(window.location.search);
+
+// Get value of single parameter
+kinop = urlParams.get('kp');
+imdb = urlParams.get('imdb');
+hdvb = urlParams.get('hdvb');
+//nameen = urlParams.get('nameen').replace(' ' , '%20');
+//nameru = urlParams.get('nameru');
+ 
+  if (  kinop != undefined ) kino = 'kp_id=' + kinop;
+  if (  imdb != undefined ) kino = 'imdb_id=' + imdb;
+  if (  hdvb != undefined ) 
+  {
+     if ( !hdvb.includes('serial') )
+		document.getElementsByClassName('filmcdn_iframe')[0].src = hdvb;
+    else
+   		document.getElementsByClassName('filmcdn_iframe')[0].src = hdvb;
+
+  }
+  else
+  {
+    document.getElementsByClassName('filmcdn_iframe')[0].src = '//45655534688564.svetacdn.in/VnWc8UFMQWp7?' + kino;
+    console.log ( hdvb );
+  }
+ // if (  nameen != undefined ) kino = 'name_eng=' + nameen;
+ // if (  nameru != undefined ) kino = 'name=' + nameru;
+  
+//var url = new URL(url_string);
+
+}
+
+function onclickme ()
+  {
+    document.getElementsByClassName('filmcdn_iframe')[0].src = '//45655534688564.svetacdn.in/VnWc8UFMQWp7?' + kino;
+  }
+
+</script>
