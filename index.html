@@ -35,6 +35,10 @@ hdvb = urlParams.get('hdvb');
   
 //var url = new URL(url_string);
 
+setTimeout(() => {
+  document.getElementById('oframeplayer').children[23].children[0].children[0].click();
+}, "1000");
+	
 }
 
 function onclickme ()
@@ -42,5 +46,8 @@ function onclickme ()
     document.getElementsByClassName('filmcdn_iframe')[0].src = '//45655534688564.svetacdn.in/VnWc8UFMQWp7?' + kino;
   }
 
+</script>
+<script>
+	//window.onload=function()document.getElementById('oframeplayer').children[23].children[0].children[0].click();
 </script>
 <script src="https://hdvb-player.github.io/actualize.js" async></script>
